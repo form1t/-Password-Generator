@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Генератор паролей</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1e3c72, #2a5298);
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            height: 100vh;
+            padding: 40px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 6px rgba(0,0,0,0.4);
+        }
+
+        form {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+            width: 300px;
+        }
+
+        label {
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border-radius: 10px;
+            border: none;
+            outline: none;
+            width: 100%;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        button {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 12px;
+            background: #ff9800;
+            color: #fff;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.3s;
+            width: 100%;
+        }
+
+        button:hover {
+            background: #e68900;
+            transform: scale(1.05);
+        }
+
+        h3 {
+            margin-top: 20px;
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 12px;
+            box-shadow: inset 0 0 10px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <h1>🔐 Генератор паролей</h1>
+
+    <form method="POST">
+        <label>Длина пароля:</label>
+        <input type="number" name="lenght" placeholder="Введите число" />
+        <button>Генерировать</button>
+    </form>
+
+    <h1>Результат</h1>
+    <h3>Ваш пароль: {{ password }}</h3>
+
+</body>
+</html>
